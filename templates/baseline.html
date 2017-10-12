@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Catalog</title>
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+</head>
+
+<body style="margin:1%;">
+	<header style=" background-color:#6dccd4; background-image:linear-gradient(#6dccd4, #e6f6f7);margin-top: 2vh; height:auto; display: flex; justify-content: space-between;">
+		<a href= "/" style="text-decoration:none;"><h1 style="font-family: 'Pacifico', cursive; font-size:4em;margin:0.5%;margin-left:2%; color:#000;"> catalog </h1></a>
+		<div id="pname" style="margin-right:1%;">
+		{% if login_status !="": %}
+			<a href= "/logout" style="text-decoration:none; display:inline-block; color:#000;"><h3>Logout</h3></a>
+		{% else %}
+			<a href= "/login" style="text-decoration:none;display:inline-block; color:#000;"><h3>Login</h3></a>
+		{% endif %}
+		</div>
+	</header>
+	<hr style=" height: 0.2em; background-color: #2d3c49;margin-bottom: 4vh; margin-top:0;">
+	{% block content %}
+	{% endblock %}
+</body>
+
+
+<footer>
+
+</footer>
+
+</html>

@@ -1,0 +1,17 @@
+{% extends "baseline.html" %}
+{% block content %}
+
+        <article style="display: flex; justify-content: space-between;flex-wrap:wrap;">
+         {% for item in catalog %}
+				<div style="  text-align: center; text-transform: uppercase;">
+					<a href='{{url_for('ViewCatalog',item_id=item.item_id)}}' >
+					<img src="{{ item.category_url }}" alt="Icon for {{item.category_name}}" style="width: 25vw;height:30vh; background-color: #e0eee9; padding: 2%;">
+					<h3>{{ item.category_name }}</h3>
+					</a>
+				</div>
+		{% endfor %}	
+
+        </article>
+
+</div>
+{%endblock %}

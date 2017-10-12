@@ -1,0 +1,14 @@
+{% extends "baseline.html" %}
+{% block content %}
+	
+	<section style="margin:auto; min-height:100vh; width:70vw; padding:2%;">
+	
+		<h2 style="width:100%;text-align: center;text-transform: uppercase; display:block;">{{item.category_item}} </h2>
+		<p style="display:block;"> {{item.item_description}} </p>
+
+		<a href='{{url_for('EditCatalog',item_id=item.item_id)}}' > EDIT</a>
+		<a href='{{url_for('DeleteCatalog',item_id=item.item_id)}}' > DELETE</a>
+	</section>
+	</br>
+
+{% endblock %}

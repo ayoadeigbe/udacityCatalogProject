@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tech Blog Registration</title>
+    <link href="../css/normalize.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+</head>
+
+<body>
+	<header style=" background-color:#6dccd4; background-image:linear-gradient(#6dccd4, #e6f6f7);margin-top: 2vh; height:auto; display: flex; justify-content: space-between;">
+		<a href= "/" style="text-decoration:none;"><h1 style="font-family: 'Pacifico', cursive; font-size:4em;margin:0.5%;margin-left:2%; color:#000;"> techblog </h1></a>
+		<div id="pname">
+			<a href= "/login" style="width:auto;text-decoration:none; color:#000;"><h3 style="margin-right:5%; width:5em;">Sign In</h3></a>
+		</div>
+	</header>
+	<hr style=" height: 0.2em; background-color: #2d3c49;margin-bottom: 4vh;">	
+	
+	<section style="margin-left:35%; display:block; width:80%">
+		<h3>PLEASE ENTER YOUR DETAIL TO REGISTER</h3>
+		<p class="error_message" style="width:26%; background-color:#ffb2b2;height:auto;"> {{error}} </p>
+		<form action="/register" method="POST">
+			<input type="text" name="firstname" placeholder="Firstname" value="{{firstname}}" style="display:block; margin-bottom:2%; min-width:25%;min-height:2em; padding:0.4%;"/>				
+			<input type="text" name="lastname" placeholder="Lastname" value="{{lastname}}" style="display:block; margin-bottom:2%; min-width:25%;min-height:2em; padding:0.4%;"/>
+			<input type="password" name="password" placeholder="Choose a Password" style="display:block; margin-bottom:2%; min-width:25%;min-height:2em; padding:0.4%;"/>
+			<input type="password" name="confirmpassword" placeholder="Confirm Password" style="display:block; margin-bottom:2%; min-width:25%;min-height:2em; padding:0.4%;"/>				
+			<input type="text" name="email" placeholder="Email Address" value="{{email}}" style="display:block; margin-bottom:2%; min-width:25%;min-height:2em; padding:0.4%;"/>
+			<input type="submit" name="signup" value="SIGN UP" style="padding:0.8%; background-color:#6dccd4;height:auto;border: none;font-size:1em;">
+		</form>
+
+	</section>
+</body>
+
+
+<footer>
+
+</footer>
+
+</html>
